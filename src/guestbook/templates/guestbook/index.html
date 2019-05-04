@@ -12,6 +12,12 @@
 <body>
   <h1>Index</h1>
 
+  {% for comment in comments %}
+  <h3>{{ comment.name }}</h3>
+  <p>{{ comment.comment }}</p>
+  <caption>{{ comment.date_added }}</caption>
+  {% endfor %}
+  <hr>
   <a href="{% url 'sign' %}">Sign the Guestbook</a>
 </body>
 </html>
